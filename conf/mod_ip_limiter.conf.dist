@@ -1,0 +1,55 @@
+# This file is part of the IP Limiter subsystem for AzerothCore.
+#
+# Copyright (C) 2026 Klaus Simon
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+###################################################################################################
+# IP LIMIT MODULE
+#
+#    IPLimit.Enabled
+#        Description: Enable/Disable the IP limit module.
+#        Default:     0 - (Disabled)
+#                     1 - (Enabled)
+
+IPLimit.Enabled = 0
+
+#    IPLimit.MaxPlayersPerIP
+#        Description: Maximum number of players allowed from a single IP address.
+#                     If exceeded, all players from that IP will be kicked.
+#        Default:     5
+
+IPLimit.MaxPlayersPerIP = 5
+
+#    IPLimit.CheckInterval
+#        Description: How often (in milliseconds) the system checks for IP limit violations.
+#        Default:     30000 (30 seconds)
+
+IPLimit.CheckInterval = 30000
+
+#    IPLimit.Whitelist
+#        Description: A comma-separated list of IP addresses that are exempt from the limit.
+#        Example:     "192.168.1.100,192.168.1.101,203.0.113.50"
+#        Default:     "" (empty)
+
+IPLimit.Whitelist = ""
+
+###################################################################################################
+# LOGGING
+#
+#    Logger.modules.iplimit
+#        Description: Logging for the IP limit module.
+#        Default:     3,Console Server
+
+Logger.modules.iplimit = 3,Console Server
