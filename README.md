@@ -35,7 +35,7 @@ Clone the module into your AzerothCore `modules` directory (from the root of you
 
 ```bash
 cd modules
-git clone https://github.com/blah.blah mod-ip-limiter
+git clone https://github.com/electrobutterfly/mod-ip-limiter.git
 
 ```
 
@@ -43,9 +43,7 @@ git clone https://github.com/blah.blah mod-ip-limiter
 
 Then re-run CMake and rebuild the server:
 
-bash
-
-```
+```bash
 cd ..
 mkdir -p build
 cd build
@@ -58,9 +56,7 @@ make install
 
 After `make install`, the distribution configuration file (`conf/mod_ip_limiter.conf.dist`) is automatically copied into the module configuration directory of your server installation, typically:
 
-text
-
-```
+```bash
 <server-root>/etc/modules/mod_ip_limiter.conf.dist
 ```
 
@@ -68,9 +64,7 @@ text
 
 Rename/copy it to `mod_ip_limiter.conf` (dropping the `.dist` suffix) and edit it as needed:
 
-bash
-
-```
+```bash
 cp etc/modules/mod_ip_limiter.conf.dist etc/modules/mod_ip_limiter.conf
 ```
 
@@ -119,9 +113,7 @@ Default: `""` (empty — no IPs whitelisted)
 
 Example:
 
-ini
-
-```
+```bash
 IPLimit.Whitelist = "192.168.1.100,192.168.1.101,203.0.113.50"
 ```
 
@@ -129,9 +121,7 @@ IPLimit.Whitelist = "192.168.1.100,192.168.1.101,203.0.113.50"
 
 ### Example
 
-ini
-
-```
+```bash
 IPLimit.Enabled          = 1
 IPLimit.MaxPlayersPerIP  = 3
 IPLimit.CheckInterval    = 15000
@@ -148,9 +138,7 @@ The module writes log lines about each tick, each non-whitelisted IP's session c
 
 The shipped configuration file declares a dedicated logger:
 
-ini
-
-```
+```bash
 Logger.modules.iplimit = 3,Console Server
 ```
 
